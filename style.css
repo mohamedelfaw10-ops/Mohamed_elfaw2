@@ -1,0 +1,19 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Outfit',sans-serif;background:#080812;color:#fff;overflow-x:hidden}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif}
+.stars{position:fixed;inset:0;z-index:-1;background:radial-gradient(ellipse at top,#151530 0%,#080812 60%)}
+.container{max-width:1100px;margin:auto;padding:0 20px}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.logo-ring{width:90px;height:90px;border-radius:50%;border:2px solid transparent;background:linear-gradient(#080812,#080812) padding-box,linear-gradient(135deg,#8b5cf6,#06b6d4) border-box;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:700;color:#a78bfa;margin-bottom:20px}
+.gradient-text{background:linear-gradient(90deg,#fff 20%,#a78bfa 50%,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.btn{padding:12px 26px;border-radius:50px;border:none;cursor:pointer;font-weight:500;text-decoration:none;display:inline-flex;gap:8px;transition:.3s}
+.btn-primary{background:linear-gradient(135deg,#8b5cf6,#6d28d9);color:#fff}
+.btn-secondary{background:transparent;border:1px solid #2a2a4a;color:#fff}
+.section{padding:80px 0}
+.badge{display:inline-block;padding:6px 14px;background:#1a1a35;border-radius:20px;font-size:11px;color:#a78bfa;border:1px solid #2a2a4a}
+.card{background:rgba(22,22,45,.8);border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:24px}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+input,textarea{width:100%;background:#13132b;border:1px solid #2a2a4a;border-radius:10px;padding:12px;color:#fff;outline:none}
+textarea{height:100px;resize:none}
+.footer{border-top:1px solid #1e1e3a;padding:30px 0;text-align:center;color:#666;font-size:13px}
+.whatsapp{position:fixed;bottom:20px;right:20px;width:52px;height:52px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:#fff;text-decoration:none}

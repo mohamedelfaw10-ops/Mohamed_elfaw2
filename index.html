@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed Elfaw - Frontend Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Outfit',sans-serif;background:#080812;color:#fff;overflow-x:hidden}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif}
+.stars{position:fixed;inset:0;z-index:-1;background:radial-gradient(ellipse at top,#151530 0%,#080812 65%)}
+.stars::before{content:'';position:absolute;width:200%;height:200%;background-image:radial-gradient(1px 1px at 20% 30%,#fff,transparent),radial-gradient(1.5px 1.5px at 80% 40%,#fff,transparent),radial-gradient(1px 1px at 40% 80%,#fff,transparent);background-size:600px 600px;opacity:.3}
+.container{max-width:1100px;margin:auto;padding:0 20px}
+#loader{position:fixed;inset:0;background:#080812;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:.8s}
+.logo{width:86px;height:86px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(#080812,#080812) padding-box,linear-gradient(135deg,#8b5cf6,#06b6d4) border-box;border:2px solid transparent;font-size:32px;font-weight:700;color:#a78bfa}
+.progress{width:220px;height:3px;background:#1e1e3a;border-radius:10px;margin-top:14px;overflow:hidden}
+.progress-bar{height:100%;width:0%;background:linear-gradient(90deg,#8b5cf6,#06b6d4)}
+.gradient{background:linear-gradient(90deg,#fff 10%,#a78bfa 50%,#22d3ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.btn{padding:12px 24px;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;font-weight:500;transition:.3s;border:none;cursor:pointer}
+.btn-p{background:linear-gradient(135deg,#7c3aed,#5b21b6);color:#fff}
+.btn-s{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:#fff}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-top:60px}
+.section{padding:80px 0}
+.badge{display:inline-block;padding:6px 14px;background:#1a1a35;border:1px solid #2a2a4a;border-radius:20px;font-size:10px;letter-spacing:2px;color:#a78bfa;margin-bottom:12px}
+.card{background:rgba(20,20,40,.7);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:24px}
+.circle{width:130px;height:130px;border-radius:50%;background:conic-gradient(#8b5cf6 var(--p),#1e1e3a var(--p));display:flex;align-items:center;justify-content:center;margin:auto;position:relative}
+.circle::before{content:'';position:absolute;width:96px;height:96px;background:#12122a;border-radius:50%}
+.circle-inner{position:relative;z-index:2;text-align:center}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.tag{padding:6px 12px;background:#1e1e3a;border-radius:20px;font-size:12px;margin:4px;display:inline-block}
+.project{overflow:hidden}
+.project img{width:100%;border-radius:14px;height:160px;object-fit:cover;background:#1a1a3a}
+input,textarea{width:100%;background:#11112a;border:1px solid #23234a;border-radius:10px;padding:13px;color:#fff;outline:none;margin-top:8px}
+textarea{height:110px;resize:none}
+.wa{position:fixed;bottom:22px;right:22px;width:54px;height:54px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:26px;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.4);z-index:50}
+.footer{border-top:1px solid #1e1e3a;padding:28px 0;text-align:center;color:#555;font-size:12px;margin-top:40px}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+
+<div id="loader">
+  <div style="font-size:10px;letter-spacing:3px;color:#a78bfa;margin-bottom:12px">WELCOME TO</div>
+  <div class="logo">M</div>
+  <h2 class="gradient" style="margin-top:14px;font-size:26px">Mohamed Elfaw</h2>
+  <div style="font-size:10px;letter-spacing:2px;color:#666;margin-top:6px">FRONTEND DEVELOPER</div>
+  <div class="progress"><div class="progress-bar" id="bar"></div></div>
+  <div id="pct" style="font-size:10px;color:#555;margin-top:8px">0%</div>
+</div>
+
+<div class="container">
+  <div class="hero">
+    <div class="logo">M</div>
+    <div style="font-size:10px;letter-spacing:3px;color:#a78bfa;margin-top:18px">HELLO, I'M</div>
+    <h1 style="font-size:52px;line-height:.95;margin:12px 0">Mohamed<br><span class="gradient">Elfaw</span></h1>
+    <div id="typing" style="color:#a78bfa;font-size:15px;min-height:22px"></div>
+    <p style="color:#777;max-width:420px;margin:16px auto;font-size:14px;line-height:1.6">Building responsive & modern web experiences with clean code and creative design. Currently learning React and building real projects every day.</p>
+    <div style="display:flex;gap:12px;justify-content:center;margin-top:8px">
+      <a class="btn btn-p" href="#">↓ Download CV</a>
+      <a class="btn btn-s" href="#contact">✦ Contact Me</a>
+    </div>
+  </div>
+
+  <section class="section">
+    <div style="text-align:center"><span class="badge">ABOUT ME</span><h2 style="font-size:32px">Who Am I?</h2></div>
+    <div class="grid2" style="margin-top:32px;align-items:center">
+      <div class="card" style="text-align:center;padding:36px"><div style="font-size:40px;color:#a78bfa">&lt;/&gt;</div><div style="margin-top:12px">Frontend Developer<br><small style="color:#666">Passion for clean code</small></div></div>
+      <div><h3>Hi, I'm Mohamed Elfaw</h3><p style="color:#999;font-size:14px;margin-top:14px;line-height:1.8">A Frontend Developer with a strong passion for web development and creating clean, responsive, and user-friendly websites. I've worked on several practical projects that helped me strengthen my problem-solving and development skills. Currently, I'm expanding my knowledge by learning React while continuing to build real-world projects every day.</p><div style="margin-top:16px"><span class="tag">✓ Problem Solver</span><span class="tag">✓ Team Player</span><span class="tag">✓ Fast Learner</span><span class="tag">✓ Detail Oriented</span></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div style="text-align:center"><span class="badge">MY ABILITIES</span><h2 style="font-size:32px">Technical <span class="gradient">Skills</span></h2></div>
+    <div class="grid4" style="margin-top:30px">
+      <div class="card" style="text-align:center"><div class="circle" style="--p:90%"><div class="circle-inner"><b>90%</b><br><small>HTML5</small></div></div></div>
+      <div class="card" style="text-align:center"><div class="circle" style="--p:85%"><div class="circle-inner"><b>85%</b><br><small>CSS3</small></div></div></div>
+      <div class="card" style="text-align:center"><div class="circle" style="--p:75%"><div class="circle-inner"><b>75%</b><br><small>JS</small></div></div></div>
+      <div class="card" style="text-align:center"><div class="circle" style="--p:40%"><div class="circle-inner"><b>40%</b><br><small>REACT</small></div></div></div>
+    </div>
+    <div class="grid2" style="margin-top:18px">
+      <div class="card"><b>CSS Frameworks</b><br><br><span class="tag">Bootstrap</span><span class="tag">Tailwind CSS</span></div>
+      <div class="card"><b>Development Tools</b><br><br><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span></div>
+    </div>
+    <div class="card" style="margin-top:18px"><b>Soft Skills</b><br><br><span class="tag">Problem Solving</span><span class="tag">Teamwork</span><span class="tag">Time Management</span><span class="tag">Continuous Learning</span></div>
+  </section>
+
+  <section class="section">
+    <div style="text-align:center"><span class="badge">MY WORK</span><h2 style="font-size:32px">Featured Projects</h2></div>
+    <div class="grid2" style="margin-top:28px">
+      <div class="card project"><div style="background:linear-gradient(135deg,#1a1a4a,#2a2a6a);height:160px;border-radius:14px;display:flex;align-items:center;justify-content:center">EquivaPath</div><h3 style="margin-top:14px">Capstone Project - EquivaPath</h3><p style="color:#777;font-size:13px;margin-top:6px">Eligibility checks and study plans platform.</p></div>
+      <div class="card project"><div style="background:linear-gradient(135deg,#1a3a4a,#1a4a6a);height:160px;border-radius:14px;display:flex;align-items:center;justify-content:center">Future Academy</div><h3 style="margin-top:14px">Future Academy</h3><p style="color:#777;font-size:13px;margin-top:6px">Educational platform with expert mentors.</p></div>
+      <div class="card project"><div style="background:linear-gradient(135deg,#3a2a1a,#4a3a2a);height:160px;border-radius:14px;display:flex;align-items:center;justify-content:center">Cafe</div><h3 style="margin-top:14px">Mohamed Elfaw Cafe</h3><p style="color:#777;font-size:13px;margin-top:6px">Modern cafe landing page branding.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div style="text-align:center"><span class="badge">ACHIEVEMENTS</span><h2 style="font-size:32px">My Certificates</h2></div>
+    <div class="grid4" style="margin-top:24px">
+      <div class="card" style="text-align:center">HTML Essentials<br><small style="color:#666">Cisco</small></div>
+      <div class="card" style="text-align:center">CSS Essentials<br><small style="color:#666">Cisco</small></div>
+      <div class="card" style="text-align:center">JavaScript Essentials<br><small style="color:#666">Cisco</small></div>
+      <div class="card" style="text-align:center">Web Dev Fundamentals<br><small style="color:#666">WE School</small></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div style="text-align:center"><span class="badge">EDUCATION</span><h2 style="font-size:32px">My Education</h2></div>
+    <div class="card" style="margin-top:24px;text-align:center">🎓 WE School for Applied Technology<br><small style="color:#888">Software Development - 2023-2026</small></div>
+  </section>
+
+  <section class="section" id="contact">
+    <div style="text-align:center"><span class="badge">LET'S CONNECT</span><h2 style="font-size:32px">Get In <span class="gradient">Touch</span></h2><p style="color:#666;font-size:13px;margin-top:8px">Have a project in mind? Reach out via email or WhatsApp!</p></div>
+    <div class="grid2" style="margin-top:28px">
+      <div>
+        <input id="name" placeholder="Your Name">
+        <input id="emailInput" placeholder="you@example.com">
+        <textarea id="msg" placeholder="Tell me about your project..."></textarea>
+        <button class="btn btn-p" style="width:100%;justify-content:center;margin-top:12px" onclick="sendMsg()">Send Message</button>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="card">✉️ mohamedelfaw10@gmail.com</div>
+        <div class="card">📱 01038359938</div>
+        <div class="card">📍 Egypt<br><small style="color:#666">Available for freelance</small></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">© 2026 Mohamed Elfaw - mohamedelfaw10@gmail.com - 01038359938</div>
+</div>
+
+<a class="wa" href="https://wa.me/201038359938" target="_blank">💬</a>
+
+<script>
+let p=0,bar=document.getElementById('bar'),pct=document.getElementById('pct'),loader=document.getElementById('loader');
+let iv=setInterval(()=>{p+=2;if(bar)bar.style.width=p+'%';if(pct)pct.innerText=p+'%';if(p>=100){clearInterval(iv);loader.style.opacity='0';setTimeout(()=>loader.style.display='none',800)}},30);
+const roles=["Frontend Developer","UI/UX Designer","React Learner"];let ri=0,ci=0,del=false,el=document.getElementById('typing');
+function type(){let cur=roles[ri];if(!del){el.textContent=cur.substring(0,ci+1);ci++;if(ci===cur.length)setTimeout(()=>del=true,1200)}else{el.textContent=cur.substring(0,ci-1);ci--;if(ci===0){del=false;ri=(ri+1)%roles.length}}setTimeout(type,del?50:90)}type();
+function sendMsg(){let n=document.getElementById('name').value,e=document.getElementById('emailInput').value,m=document.getElementById('msg').value;if(!n||!e||!m){alert('املى كل الخانات');return}window.open(`https://wa.me/201038359938?text=${encodeURIComponent(`Hi Mohamed, I am ${n} (${e}): ${m}`)}`,'_blank')}
+</script>
+</body>
+</html>
